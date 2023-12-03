@@ -1,0 +1,23 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Pacifico&display=swap');
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+  font-family: 'Pacifico', cursive;
+  background-color: #000000d9.85;
+}
+/* .slick-slide img{
+    padding: 0 10px;
+} */
+.slick-slide{
+  padding: 0 14px;
+}
+.infinite{overflow: initial !important;}
+.sketlon{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

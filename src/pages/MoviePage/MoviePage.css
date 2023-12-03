@@ -1,0 +1,126 @@
+/* .moviewrapmain{position: relative;}
+.moviewrap{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, hwb(0 15% 85% / 0.18), rgb(37, 37, 37.9));
+} */
+.moviewrap {
+  background: linear-gradient(to left, #252526, #252526);
+  position: relative;
+}
+.moviewrap .container-fluid {
+  max-width: 1920px;
+  padding-left: 100px;
+}
+.moviewrap .col-md-7 {
+  padding: 0;
+}
+.moviewrap .leftSide {
+  color: #fff;
+  padding: 3rem 0;
+}
+.moviewrap .leftSide h6{
+    color: #FFF;
+font-family: Outfit;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+text-transform: capitalize;
+margin: 13px 0;
+}
+.moviewrap .leftSide .srtDecs {
+    color: rgba(241, 240, 248, 0.63);
+    font-family: Outfit;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    /* line-height: 110%;  */
+    /* 28.6px */
+    text-transform: capitalize;
+}
+.moviewrap .leftSide .rating{display: flex;gap: 10px;align-items: center;margin: 13px 0;}
+.moviewrap .leftSide .rating img{
+    width: 20px;
+height: 20px;
+}
+.moviewrap .leftSide .rating p{color: #fff;}
+.moviewrap .leftSide .genre{}
+.moviewrap .leftSide .cast{}
+.moviewrap .leftSide .subtitles{}
+.moviewrap .leftSide .butnsPlay{}
+.moviewrap .leftSide .butnsPlay a{
+    margin-top: 1rem;
+    border-radius: 6px;
+background: #B95AFB;
+color: #FFF;
+font-family: Outfit;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 27.5px; /* 76.389% */
+text-transform: capitalize;
+display: flex;
+align-items: center;
+gap: 10px;
+border: none;
+padding: 10px 30px;
+display: inline-block;
+}
+.moviewrap .leftSide .butnsPlay a img{
+    width: 10px;
+    height: 10px;
+}
+.dsfhds {
+    padding-bottom: 60.25%;
+    margin-top: 2px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.moviewrap .rightSide {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute !important;
+}
+.moviewrap .rightSide img{
+    height: 100%;
+}
+.moviewrap .rightSide::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: #252526;
+  content: "";
+  box-shadow: 3px 0 80px 80px #252526;
+}
+.moviewrap .rightSide::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: #252526;
+  content: "";
+  box-shadow: 3px 0 80px 80px #252526;
+}
+
+
+.castWrp{
+    background: #252526;
+    color: #fff;
+    padding: 3rem 0;
+}
+
+.castWrp .cast{margin: 2rem 0;}
+.castWrp .cast h1{font-size: 26px;padding: 2rem 0;}
+.castWrp .cast img{clip-path: circle();padding: 0;}
+.castWrp .cast h4{font-size: 20px;text-align: center;}

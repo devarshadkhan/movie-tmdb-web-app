@@ -1,0 +1,60 @@
+
+
+.movieCard img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+  border-radius: 7px;
+}
+body{
+  /* background: rgba(0, 0, 0, 0.85); */
+}
+.movieCard {
+  padding: 3rem 0;
+  background: rgba(0, 0, 0, 0.85);
+ /* height: 100vh; */
+  /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset; */
+}
+.cardImg{border-radius: 8px;}
+.movieCard h4 {
+  color: #fff;
+  font-family: Outfit;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  /* 39.6px */
+  text-transform: capitalize;
+ 
+}
+.movieCard p{
+  color: #fff;
+  font-size: 14px;
+  margin-top: 10px;
+  /* text-align: center; */
+}
+.movieCard span{
+  color: #afa4a4;
+  font-size: 14px;
+  margin-top: 0 !important;
+  /* text-align: center; */
+}
+.CircularProgressbar .CircularProgressbar-text{font-size: 32px !important; fill: black !important;font-weight: bold;}
+.circleRating{
+  width: 29%;
+  /* height: 200px; */
+  background: #fff;
+  border-radius: 50%;
+  padding: 4px;
+}
+.mainRD{
+  display: flex;
+    align-items: center;
+    gap: 19px;
+    margin: 1rem 0;
+}
+
+.selectT{display: flex;align-items: center;justify-content: space-between; padding-bottom: 2rem;}
+.selectT .form-select{width: 20%;}
