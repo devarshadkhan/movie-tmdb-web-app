@@ -67,7 +67,7 @@ const AllMovies = () => {
             >
               <div className="row">
                 {allMovie.map((e) => (
-                  <div key={e.id} className="col-12 col-md-2">
+                  <div key={e.id} className="col-12 col-lg-2 col-md-4">
                     <Link to={`/${e.media_type || mediaType}/${e.id}`}>
                       {/* <img
                         src={

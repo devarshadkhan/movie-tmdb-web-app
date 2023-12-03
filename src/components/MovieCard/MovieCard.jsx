@@ -41,7 +41,7 @@ const {loader} = useLoader()
               <div className="col-12">
                 <div className="selectT">
                   <h4>{name}</h4>
-                  {chooseByWeek && (
+                  {/* {chooseByWeek && (
                     <>
                       <select
                         className="form-select"
@@ -53,7 +53,7 @@ const {loader} = useLoader()
                         <option value={week}>{week}</option>
                       </select>
                     </>
-                  )}
+                  )} */}
                {changeSelectMovieType &&  <select
                     className="form-select"
                     aria-label="Default select example"
@@ -66,12 +66,12 @@ const {loader} = useLoader()
                  
                 </div>
               </div>
-              {loader ? (
+              {/* {loader ? (
               
                 <div className="spinner-border text-secondary text-center d-" role="status">
                   <span className="visually-hidden"></span>
                 </div>
-              ) : (
+              ) : ( */}
                 <Slider {...settings}>
                   {movieListing?.map((e) => (
                     <Link
@@ -120,7 +120,7 @@ const {loader} = useLoader()
                     </Link>
                   ))}
                 </Slider>
-              )}
+              {/* )} */}
             </div>
           </div>
         </section>

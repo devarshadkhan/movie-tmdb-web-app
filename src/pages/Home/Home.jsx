@@ -114,7 +114,18 @@ const Home = () => {
   return (
     <>
       <HeroBanner />
-      <MovieCard
+     {/* <select
+                    className="form-select"
+                    aria-label="Default select example"
+                    // value={chooseType1}
+                    // onChange={(e) => changeSelectMovieType2(e.target.value)}
+                  >
+                    <option value={"tv"}>{"tv"}</option>
+                    <option value={"movie"}>{"movie"}</option>
+                  </select> */}
+      {loader?<> <div className="spinner-border text-secondary text-center d-" role="status">
+                  <span className="visually-hidden"></span>
+                </div></>:<><MovieCard
         name="Top Rated"
         tv="tv"
         movie="movie"
@@ -122,7 +133,7 @@ const Home = () => {
         changeSelectMovieType={changeSelectMovieType2}
         ChooseByMovieType={chooseType1}
         // loading={loader}
-      />
+      /></>}
       <MovieCard
         movieListing={trending}
         name="Trending"
