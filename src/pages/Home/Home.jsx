@@ -6,6 +6,8 @@ import CircleRating from "../../components/circlerating/CircleRating";
 import axiosInstance from "../../utils/axios";
 import { API } from "../../utils/apiEndpoint";
 import { useLoader } from "../../contextApp/LoaderContext";
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 const Home = () => {
   const [trending, setTrending] = useState([]);
   const [popular, setPopular] = useState([]);
@@ -123,9 +125,20 @@ const Home = () => {
                     <option value={"tv"}>{"tv"}</option>
                     <option value={"movie"}>{"movie"}</option>
                   </select> */}
-      {loader?<> <div className="spinner-border text-secondary text-center d-" role="status">
-                  <span className="visually-hidden"></span>
-                </div></>:<><MovieCard
+      {loader?<> 
+      <div style={{display:"flex"}}>
+      {(loader ? Array.from(new Array(4)) : toprated).map((id, index) => (
+              <div >
+              <div key={index} className="bodysketlon" >
+                  <SkeletonTheme baseColor="#202020" highlightColor="#444" >
+                    <Skeleton variant="rectangular" width={310} height={120} />
+                    <Skeleton width="40%" />
+                  </SkeletonTheme>
+                </div>
+              </div>
+              ))}
+      </div>
+              </>:<><MovieCard
         name="Top Rated"
         tv="tv"
         movie="movie"
