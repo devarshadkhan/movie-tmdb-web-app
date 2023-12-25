@@ -1,5 +1,5 @@
 export const API = {
-    allMovie:"/trending/movie",
+    allMovie:"/trending/all/day",
     movieDetail:"movie",
     cast:"movie",
     popular:"movie/popular",

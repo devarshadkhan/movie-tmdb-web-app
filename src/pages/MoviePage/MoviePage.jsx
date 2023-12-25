@@ -8,7 +8,9 @@ import { API } from "../../utils/apiEndpoint";
 import { useParams } from "react-router-dom";
 import Slider from "react-slick";
 import { formatDateToMonthNameDayYear, toHoursAndMinutes } from "../../utils/hooks";
+import { useLoader } from "../../contextApp/LoaderContext";
 const Movie = () => {
+  const { id, mediatype } = useParams();
   const settings = {
     dots: true,
     infinite: true,
@@ -18,14 +20,18 @@ const Movie = () => {
     dots: false,
   };
   const [singleMovie, setSingleMovie] = useState("");
-  const { id, mediatype } = useParams();
+  
+  const { loader, setLoader } = useLoader();
   const trendingMovie = async () => {
-    await axiosInstance.get(`${mediatype}/${id}`).then((res) => {
-      // console.log("gwegfgwefwe",res);
-      // setTrending(res.data.results)
+    setLoader(true)
+    await axiosInstance.get(`${mediatype}/${id}`)
+    .then((res) => {
+      setLoader(false)
       setSingleMovie(res.data);
-      // console.log(res.data);
-    });
+    })
+    .catch((err)=>{
+      setLoader(false)
+    })
   };
   useEffect(() => {
     trendingMovie();
@@ -43,16 +49,9 @@ const Movie = () => {
     castApi();
   }, []);
 
-  // const toHoursAndMinutes = (totalMinutes) => {
-  //   const hours = Math.floor(totalMinutes / 60);
-  //   const minutes = totalMinutes % 60;
-  //   return `${hours}h${minutes > 0 ? ` ${minutes}m` : ""}`;
-  // };
-
   return (
     <>
-      {/* <div className='moviewrapmain'> */}
-      {/* <img src={bgImgM} /> */}
+  
       <div className="moviewrap">
         <div className="container-fluid">
           <div className="row">
@@ -227,7 +226,7 @@ const Movie = () => {
           </div>
         </div>
       )}
-      {/* </div> */}
+  
     </>
   );
 };
